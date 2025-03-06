@@ -1,70 +1,11 @@
 import java.util.Scanner;
 import java.util.Map;
 import java.util.HashMap;
-class Item{
-    private String itemId;
-    private String name;
-    private String description;
-    private int price;
 
-    public Item(String itemId, String name, String description, int price){
-        this.itemId = itemId;
-        this.name = name;
-        this.description = description;
-        this.price = price;
-    }
+/** Class ShoopingCart is used to maintain a cart for all available items,
+ * ans have different kind of methods and operations
+ */
 
-public String getName(){
-    return name;
-}
-public String getDescription(){
-    return description;
-}
-public int getPrice(){
-    return price;
-}
-}
-class CartValue{
-    private final Map<Item, Integer> cart;
-    public CartValue(){
-        this.cart = new HashMap<>();
-    }
-
-    public void addToCart(Item item, Integer quantity){
-        if(cart.containsKey(item)){
-        cart.put(item, cart.get(item) + quantity);
-        }
-        else{
-            cart.put(item, quantity);
-        }
-    }
-    public Integer DisplayQty(Item item){
-        return cart.containsKey(item) ? cart.get(item) : 0;
-    }
-
-    public void updateQty(Item item, Integer quantity){
-        if(cart.containsKey(item));
-        cart.put(item, quantity);
-    }
-
-    public void deleteItem(Item item){
-        if(cart.containsKey(item)){
-        cart.remove(item);
-        System.out.println("Item deleted successfully");
-    }
-    else{
-        System.out.println("Item is not present in your cart");
-    }
-    }
-
-    public int displayBill(){
-        int total = 0;
-        for(Item item : cart.keySet()){
-            total += item.getPrice() * cart.get(item);
-        }
-        return total;
-    }
-}
 public class ShoopingCart{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -76,7 +17,10 @@ public class ShoopingCart{
      items.put("204",new Item("204","Mic","Clear sound",2000));
      items.put("205",new Item("205","Headphone","Noice Cancelling",3000));
         boolean run=true;
+
+        // Loop to the menu 
         while(run){
+            //........... Menu.........
             System.out.println("1. Add an item to cart:");
             System.out.println("2. Display Quantity:");
             System.out.println("3. Update Quantity:");
@@ -87,11 +31,15 @@ public class ShoopingCart{
 
             int choice = scanner.nextInt();
             String Id;
+
+            // Switch case to show the menu:
             switch(choice){
-                case 1:
+                case 1:                 // Add item to cart
                     System.out.println("Available items:");
                     for(String key : items.keySet()){
-                        System.out.println(key + ", " + items.get(key).getName() + ", " + items.get(key).getDescription() + ", " + items.get(key).getPrice());
+                        System.out.println(key + ", " + items.get(key).getName() + ", " 
+                        + items.get(key).getDescription() 
+                        + ", " + items.get(key).getPrice());
                     }
                     System.out.println("Enter item Id:");
                     Id = scanner.next();
@@ -110,17 +58,18 @@ public class ShoopingCart{
                     }
                     break;
 
-                case 2:
+                case 2:                  // Display quantity of an item in cart
                     System.out.println("Enter item Id to display quantity:");
                     Id = scanner.next();
                     if(items.containsKey(Id)){
-                        System.out.println("Quantity:" + cart.DisplayQty(items.get(Id)));
+                        System.out.println("Quantity:" + cart.displayQty(items.get(Id)));
                     }
                     else{
                         System.out.println("Item not found");
                     }
                     break;
-                case 3:
+
+                case 3:                      //update quantity of an item in cart
                     System.out.println("Enter Item Id to update");
                     Id = scanner.next();
                     if(items.containsKey(Id)){
@@ -137,7 +86,8 @@ public class ShoopingCart{
                         System.out.println("item not found");
                     }
                     break;
-                case 4:
+                    
+                case 4:               // Delete an item from cart
                     System.out.println("Enter item ID to delete:"); 
                     Id= scanner.next();
                     if(items.containsKey(Id)){
@@ -147,12 +97,15 @@ public class ShoopingCart{
                         System.out.println("Item not found");
                     }
                     break;
-                case 5:
+
+                case 5:                // Display total bill of cart
                     System.out.println("Total Bill is: Rs " + cart.displayBill());
                     break;
-                case 6:
+                    
+                case 6:             // Exit
                     run = false;
                     break;
+
                 default:
                     System.out.println("Invalid choice. Plrase try again. ");
             }
