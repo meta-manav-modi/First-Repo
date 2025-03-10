@@ -1,5 +1,5 @@
 package area;
-impport java.lang.Math;
+import java.lang.Math;
 
 /** class Operations, have all methods to perform like
  * area of triangle, circle, square, rectangle
@@ -10,7 +10,9 @@ public class Operations{
      * @ param height and width
      */
     public double areaTriangle(double height, double width){
-        throw new ArithmeticException("Width & height must be greater than 0");
+        if( height <= 0 || width <= 0){
+            throw new ArithmeticException("Width & height must be greater than 0");
+        }
         double triangle = (height * width) / 2;
         return triangle;
     }
@@ -19,7 +21,9 @@ public class Operations{
      *  @ param height and width
     */
     public double areaRectangle(double height, double width){
-        throw new ArithmeticException("Width & height must be greater than 0");
+        if( height <= 0 || width <= 0){
+            throw new ArithmeticException("Width & height must be greater than 0");
+        }
         double rectangle = height * width;
         return rectangle;
     }
@@ -28,7 +32,9 @@ public class Operations{
      * @ param width
     */
     public double areaSquare(double width){
-        throw new ArithmeticException("Width must be greater than 0");
+        if( width <= 0){
+            throw new ArithmeticException("Width must be greater than 0");
+        }
         double square = width * width;
         return square;
     }
@@ -37,7 +43,9 @@ public class Operations{
      * @ param radius 
      */
     public double areaCircle(double radius){
-        throw new ArithmeticException("Radius must be greater than 0");
+        if( radius <= 0){
+            throw new ArithmeticException("Radius must be greater than 0");
+        }
         double circle = Math.PI * radius * radius;
         return circle;
     }

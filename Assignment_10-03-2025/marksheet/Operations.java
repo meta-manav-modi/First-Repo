@@ -8,17 +8,20 @@ import java.util.HashMap;
 public class Operations{
     
     // Hashmap to store the grades of students
-    HashMap<String, Student> grade = new HashMap<>();
+    private HashMap<String, Student> grade = new HashMap<>();
     
-    // Constructor to initialize the values
-    Operations(HashMap<String, Student> grade){
-        this.grade = grade;
-    }
+    public void addGrade(String key,Student student) {
+        try{
+            grade.put(key,student);
+        }catch(ArithmeticException e){
+            System.out.println("Marks cannot be negative");
+        }
+        }
     
     /**Method Average, return the average of all grades in double type 
      * @ param HashMap with grades of student
     */
-    public double average(HashMap<String,Student> grade)  throws ArithmeticException {
+    public double average()  throws ArithmeticException {
         if(grade == null || grade.size() == 0){
             throw new ArithmeticException("Cannot comput, no data available");
         }
@@ -32,7 +35,7 @@ public class Operations{
     /**Method maximumGrade, return the maximum grades from all in double type value 
      *  @ param HashMap with grades of student
     */
-    public double maximumGrade(HashMap<String,Student> grade) throws ArithmeticException {
+    public double maximumGrade() throws ArithmeticException {
          if(grade == null || grade.size() == 0){
             throw new ArithmeticException("Cannot comput, no data available");
         }
@@ -49,7 +52,7 @@ public class Operations{
     /** Method minimumGrade, return the minimum grade from all in double typr value 
      *  @ param HashMap with grades of student
     */
-    public double minimumGrade(HashMap<String,Student> grade) throws ArithmeticException {
+    public double minimumGrade() throws ArithmeticException {
          if(grade == null || grade.size() == 0){
             throw new ArithmeticException("Cannot comput, no data available");
         }
@@ -66,7 +69,7 @@ public class Operations{
     /** Method passedStudent, return the percentage of passed students from all in double type 
      *  @ param HashMap with grades of student
      */ 
-    public double passedStudent(HashMap<String,Student> grade) throws ArithmeticException {
+    public double passedStudent() throws ArithmeticException {
          if(grade == null || grade.size() == 0){
             throw new ArithmeticException("Cannot comput, no data available");
         }

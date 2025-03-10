@@ -29,30 +29,46 @@ public class Utility{
             // Switch Case
             switch(choice){
                 case 1:    //Area of Triangle
-                    System.out.println("Enter height");
-                    height = sc.nextDouble();
-                    System.out.println("Enter width");
-                    width = sc.nextDouble();
-                    System.out.println("Area of Triangle :" + operation.areaTriangle(height, width));
+                    try{
+                        System.out.println("Enter height");
+                        height = sc.nextDouble();
+                        System.out.println("Enter width");
+                        width = sc.nextDouble();
+                        System.out.println("Area of Triangle :" + operation.areaTriangle(height, width));
+                    }catch(ArithmeticException e){
+                        System.out.println ("Width & height must be greater than 0"); 
+                    }
                     break;
                     
                 case 2:    //Area of Rectangle
-                    System.out.println("Enter height");
-                    height = sc.nextDouble();
-                    System.out.println("Enter width");
-                    width = sc.nextDouble();
-                    System.out.println("Area of Rectangle :" + operation.areaRectangle(height, width));
+                try{
+                        System.out.println("Enter height");
+                        height = sc.nextDouble();
+                        System.out.println("Enter width");
+                        width = sc.nextDouble();
+                        System.out.println("Area of Rectangle :" + operation.areaRectangle(height, width));
+                }catch(ArithmeticException e){
+                    System.out.println ("Width & height must be greater than 0"); 
+                }
                     break;
                 case 3:    //Area of Square
-                    System.out.println("Enter width");
-                    width = sc.nextDouble();
-                    System.out.println("Area of Square :" + operation.areaSquare(width));
+                    try{
+                        System.out.println("Enter width");
+                        width = sc.nextDouble();
+                        System.out.println("Area of Square :" + operation.areaSquare(width));
+                    }catch(ArithmeticException e){
+                        System.out.println ("Width must be greater than 0"); 
+                    }
                     break; 
 
                 case 4:    //Area of Circle
-                    System.out.println("Enter radius");
-                    radius = sc.nextDouble();
-                    System.out.println("Area of Circle" + operation.areaCircle(radius));
+                    try{
+                        System.out.println("Enter radius");
+                        radius = sc.nextDouble();
+                        System.out.println("Area of Circle" + operation.areaCircle(radius));
+                    }catch(ArithmeticException e){
+                        System.out.println ("Radius must be greater than 0"); 
+                    }
                     break;
 
                 case 5:    //Exit

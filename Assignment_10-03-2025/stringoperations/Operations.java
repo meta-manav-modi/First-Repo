@@ -10,6 +10,7 @@ public class Operations{
     /** Method toCompare, return true if strings are equal, otherwise false 
      * @ param first and second string 
     */
+   
     public boolean toCompare(String firstString, String secondString){
         if(firstString.length() != secondString.length() ){
             return false;
