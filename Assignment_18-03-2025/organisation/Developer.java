@@ -11,13 +11,13 @@ public class Developer extends Employee{
     
     // Defination of abstract methods of employee class
     public double getBasicSalary(){
-        return (75 * salary) / 100;   //base salary is 75%
+        return (75 * salary) / 100;   
     }
     public double getBonus(){
-        return (15 * salary) / 100 ;  // bonus id 15%
+        return (15 * salary) / 100 ;  
     }
     public double getCompensation(){
-        return (10 * salary) / 100;    // compensation is 10%
+        return (10 * salary) / 100;    
     }
 
 }

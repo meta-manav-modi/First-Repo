@@ -7,18 +7,18 @@ import java.util.List;
  * addDepartment and getAllEmployees list
  */
 public class Organisation {
-    List<Department> departments = new ArrayList<>();
+    private List<Department> departments = new ArrayList<>();
 
     /** Mathod addDepartment, return boolean value if department is successfully added
      * @ param object of department class
      */
     boolean addDepartment(Department d) {
-        if (departments.contains(d))
-            return false;
-        else {
-            departments.add(d);
+        for (Department dep : departments) {
+            if (dep.getId() == d.getId()) {
+                return false;
+            }
         }
-        return true;
+        return departments.add(d);
     }
 
     /** Mathod getAllEmployees, return arraylist of all employees from all departments
@@ -26,7 +26,7 @@ public class Organisation {
     public List<Employee> getAllEmployees(){
         List<Employee> allEmployeeList = new ArrayList<>();
         for(Department d : departments){
-            allEmployeeList.addAll(d.employeeList);
+            allEmployeeList.addAll(d.getEmployees());
         }
         return allEmployeeList;
     }

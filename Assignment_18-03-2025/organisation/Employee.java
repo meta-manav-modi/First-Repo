@@ -4,7 +4,7 @@ package organisation;
  * like getBasicSalary, getBonus, getCompensation
  */
 public abstract class Employee {
-    protected String Id;
+    private String Id;
 
     public Employee(String Id){
         this.Id = Id;
