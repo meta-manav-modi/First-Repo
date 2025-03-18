@@ -11,10 +11,10 @@ import java.util.Map;
 /** class SparseMatrix, have constructor to initialize the values and perform operations on matrix like,
  * transpose, addition, multiplication, check symmetric or not
  */
-public class SparseMatrix {
-    public List<Matrix> nonZeroElementsList;
-    private int rows;
-    private int cols;
+public final class SparseMatrix {
+    private  final List<Matrix> nonZeroElementsList;
+    private final int rows;
+    private final int cols;
 
     public SparseMatrix(int rows, int cols, List<Matrix> nonZeroElementsList) {
         this.nonZeroElementsList = new ArrayList<>(nonZeroElementsList);
@@ -27,7 +27,7 @@ public class SparseMatrix {
      * and return the object of SparseMatrix having transpose matrix
      */
     public SparseMatrix transpose(){
-        List<Matrix> transpoedValues = new ArrayList<>();
+        final List<Matrix> transpoedValues = new ArrayList<>();
         for( Matrix m : nonZeroElementsList){
             transpoedValues.add(new Matrix(m.getColumn(), m.getRow(), m.getValue()));
         }
@@ -54,7 +54,7 @@ public class SparseMatrix {
             throw new AssertionError("Addition is not possible in this case");
         }
         
-        List<Matrix> additionResult = new ArrayList<>();
+        final List<Matrix> additionResult = new ArrayList<>();
         Map<String, Integer> sum = new HashMap<>();
         for(Matrix m : this.nonZeroElementsList){
             sum.put(m.getRow() + "," + m.getColumn(), m.getValue());
@@ -85,7 +85,7 @@ public class SparseMatrix {
         if(this.cols != other.rows){
             throw new AssertionError("Multiplication is not possible");
         }
-        List<Matrix> multiplyResult = new ArrayList<>();
+        final List<Matrix> multiplyResult = new ArrayList<>();
         Map<String, Integer> product = new HashMap<>();
         for(Matrix m : this.nonZeroElementsList){
             for(Matrix n : other.nonZeroElementsList){

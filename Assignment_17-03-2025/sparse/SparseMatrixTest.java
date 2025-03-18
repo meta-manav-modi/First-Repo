@@ -16,7 +16,7 @@ public class SparseMatrixTest {
         SparseMatrix transposed = input.transpose();
         List<Matrix> expected = Arrays.asList(new Matrix(1,0,2), new Matrix(0,1,2));
 
-        assertEquals(expected.size(), transposed.nonZeroElementsList.size());
+        assertEquals(expected.size(), transposed.getNonZeroElementsList().size());
 
     }
     @Test
@@ -67,7 +67,7 @@ public class SparseMatrixTest {
 
 
     private int getValueAt(SparseMatrix matrix, int row, int col){
-        for(Matrix m : matrix.nonZeroElementsList){
+        for(Matrix m : matrix.getNonZeroElementsList()){
             if(m.getRow() == row && m.getColumn() == col){
                 return m.getValue();
             }
