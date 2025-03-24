@@ -1,0 +1,81 @@
+1. /////// Insert into category table ///////////
+
+// First Layer
+INSERT INTO category(title,parent_category_id) VALUES
+  ('ELECTRONICS',NULL),
+  ('Home Devices',NULL),
+  ('Fashion',NULL);
+
+
+// Second Layer
+INSERT INTO category(title,parent_category_id) VALUES
+  ('Mobile',1),
+  ('Laptop',1),
+  ('Tv',2),
+  ('AC',2),
+  ('Clothes',3),
+  ('Makeup',3);
+
+// Third Layer
+INSERT INTO category(title,parent_category_id) VALUES
+  ('Smartphone',4),
+  ('Gaming',5),
+  ('Office_use',5),
+  ('LED',6),
+  ('LCD',6),
+  ('Split',7),
+  ('Window',7),
+  ('Men',8),
+  ('Women',8),
+  ('Eye',9),
+  ('Face',9);
+  
+
+2. ////// inserting values to table product //////
+
+INSERT INTO product(title,description,price,category_id,is_active) VALUES
+  ('iPhone 15','Latest Apple smartphone',100000,10,TRUE),
+  ('samsung Galaxy S23','Premium samsung smartphone',60000,10,TRUE),
+  ('Dell xp 13','High performance',65000,12,TRUE),
+  ('Sony LCD','Quality effcient',20000,14,TRUE);
+
+
+3./////// inserting values to table image
+
+INSERT INTO image(product_id,image_url) VALUES
+  (1,"iPhone15.jpg"),
+  (2,"galaxy_s23.jpg"),
+  (3,"dell_xps.jpg"),
+  (4,"sony_lcd.jpg");
+
+
+4. /////// inserting value o table inventory/////
+
+INSERT INTO inventory(product_id,quantity) VALUE
+  (1,10),
+  (2,13),
+  (3,3),
+  (4,30);
+
+5. ////// inserting values to table orders ///
+
+INSERT INTO orders(shopper_id,total) VALUES
+    (1, 220000),
+    (2, 105000);
+
+
+6. ///// inserting values to table order_detail/////
+
+INSERT INTO order_detail(order_id,product_id,quantity,price,shipped) VALUES
+    (1,1,1,100000,TRUE),
+    (2,3,1,65000,TRUE),
+    (2,4,2,40000,TRUE),
+    (1,2,2,120000,TRUE);
+
+
+7. //////// inerting values to able shopper ////////
+
+INSERT INTO shopper(shopper_id,name,email,contact) VALUES
+    (1,"manav","manavmodi.com",3456784838),
+    (2,"modi","modi12345.com",1234543210);
+
