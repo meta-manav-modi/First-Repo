@@ -20,14 +20,14 @@ public class Utility {
                         if (parts.length > 1)
                             commPromt.mkdir(parts[1]);
                         else {
-                            System.out.println("Usage: mkdirfolder_name]");
+                            System.out.println("Required folder name");
                         }
                         break;
                     case "cd":
                         if (parts.length > 1)
                             commPromt.cd(parts[1]);
                         else {
-                            System.out.println("Usage: mkdirfolder_name]");
+                            System.out.println("Required folder name");
                         }
                         break;
                     case "ls":
@@ -40,7 +40,7 @@ public class Utility {
                         if (parts.length > 1)
                             commPromt.find(parts[1]);
                         else {
-                            System.out.println("Usage: mkdirfolder_name]");
+                            System.out.println("Required folder name");
                         }
                         break;
                     case "tree":
