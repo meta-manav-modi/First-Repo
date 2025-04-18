@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* styling for top navbar menu */
+.navbar ul {
+    list-style-type: none;
+    background-color: turquoise;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: aqua;
+}
+
+.navbar li {
+    float: left;
+}
+
+
+/* styling for the cover image */
+.cover_image{
+    margin: 50px;
+}
+.parking_image{
+    border-radius: 10px;
+    width: 50%;
+    height: 150%;
+    
+}
+
+
+/* styling for the employee section and its form */
+#employee_section {
+    border: solid;
+    background-color: gainsboro;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+
+
+#employee_form {
+    border-radius: 50px;
+    width: 500px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+
+/* styling for the vehicle section and its form */
+#vehicle_section {
+    border: solid;
+    background-color: lightgrey;
+    border-radius: 50px;
+    margin: auto;
+}
+
+#vehicle_form {
+    border-radius: 50px;
+    width: 500px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* styling for the collapsable things */
+details {
+    width: auto;
+    margin: auto;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+
+    padding: 10px;
+}
+
+summary {
+    font-size: 18px;
+    border: 1px solid black;
+    background-color: grey;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+
+/* styling for input fields, its labels */
+.input_field {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.form_input {
+    padding: 5px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+label {
+    font-size: larger;
+    font-weight: bold;
+    width: 180px;
+}
+
+.label_radio {
+    width: 70px;
+    font-size: medium;
+}
+
+/* styling for submit button for employee and vechicle forms */
+.form_submit_button {
+    background: rgb(114, 216, 127);
+    color: white;
+    margin-left: 200px;
+    border-style: outset;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+}
+
+.form_submit_button:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* styling for the feedback section and its form*/
+#feedback_section {
+    background-color: rgb(230, 240, 240);
+    margin: 40px auto;
+    padding-bottom: 20px;
+}
+
+#feedback_section h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+#feedback_form {
+    border: 1px solid lightblue;
+    background-color: white;
+    border-radius: 50px;
+    width: 500px;
+    padding: 10px;
+    margin-left: 350px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+#feedback_form h3{
+    text-align: center;
+    font-size: larger;
+}
+
+/* styling for input fields in feedback form */
+.input_field_feedback {
+    margin: 30px;
+    padding: 10px;
+}
+
+.input_field_feedback input,
+.input_field_feedback textarea {
+
+    width: 95%;
+    border-radius: 40px;
+    font-size: 15px;
+    border: 1px solid darkblue;
+    padding: 8px;
+
+}
+
+.input_field_feedback textarea {
+    resize: vertical;
+    max-height: 80px;
+}
+
+/* styling for submit feedback button */
+.feedback_submit_button {
+    background: rgb(114, 216, 127);
+    color: white;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    border-style: outset;
+    border-radius: 10px;
+    height: 50px;
+    width: 360px;
+}
+
+.feedback_submit_button:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* styling for the pricng section and its components */
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px 180px;
+    background-color: aliceblue;
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.price {
+    margin: 30px 30px;
+    font-weight: bold;
+}
+
+.vehicle_price {
+    height: 250px;
+    width: 200px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+#pricing_section h2 {
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vehicle_price h3 {
+    text-decoration: solid;
+    text-align: center;
+}
+
+/* styling for the purchase button in pricing section */
+.purchase_button {
+    background: rgb(114, 216, 127);
+    border: 2px solid;
+    border-radius: 30px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: medium;
+    margin: 25px 10px;
+    cursor: pointer;
+}
+
+.purchase_button:hover {
+    background-color: #04AA6D;
+    color: white;
+}

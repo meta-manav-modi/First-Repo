@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Metacube Parking System</title>
+</head>
+
+<body>
+
+    <!-- The top Navbar menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#employee_section">Add Employee</a></li>
+            <li><a href="#vehicle_section">Add Vehicle</a></li>
+            <li><a href="#feedback_section">Give Feedback</a></li>
+            <li><a href="#pricing_section">Pricing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cover image under navbar menu -->
+    <div class="cover_image">
+        <img src="image_park" class="parking_image" alt="Image not found">
+    </div>
+
+    <!-- Add Employee section with its form -->
+    <section id="employee_section">
+        <details>
+            <summary> Add Employee</summary>
+
+            <form id="employee_form">
+                <div class="input_field">
+                    <label for="emp_name">Full Name : </label>
+                    <input type="text" class="form_input" id="emp_name" name="emp_name" placeholder="Metacube" required>
+                </div>
+                <div class="input_field">
+                    <label for="contact">Contact Number : </label>
+                    <input type="tel" class="form_input" id="contact" name="contact" placeholder="(+91)9876543210 "
+                        required>
+                </div>
+                <div class="input_field">
+                    <label for="email">Email : </label>
+                    <input type="email" class="form_input" id="email" name="email" placeholder="name@metacube.com"
+                        required>
+                </div>
+                <div class="input_field">
+                    <label for="gender">Gender : </label>
+
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" class="label_radio">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" class="label_radio">Female</label>
+
+                    <input type="radio" id="others" name="gender" value="others">
+                    <label for="others" class="label_radio">Others</label>
+                </div>
+                <div class="input_field">
+                    <label for="password">Password : </label>
+                    <input type="password" class="form_input" id="password" name="password" maxlength="12" required>
+                </div>
+                <div class="input_field">
+                    <label for="confirm_password">Confirm Password : </label>
+                    <input type="password" class="form_input" id="confirm_password" name="confirm_password" required>
+                </div>
+                <div class="input_field">
+                    <input type="submit" placeholder="Submit" class="form_submit_button">
+                </div>
+            </form>
+        </details>
+    </section>
+
+
+    <!-- Add Vehicle section with its form -->
+    <section id="vehicle_section">
+        <details>
+            <summary>Add Vehicle</summary>
+            <form id="vehicle_form">
+                <div class="input_field">
+                    <label for="veh_comapny">Vehicle Company : </label>
+                    <input type="text" class="form_input" id="veh_comapny" name="veh_comapny" placeholder="company name"
+                        required>
+                </div>
+                <div class="input_field">
+                    <label for="veh_model">Vehicle Model : </label>
+                    <input type="text" class="form_input" id="veh_model" name="veh_model" placeholder="model name"
+                        required>
+                </div>
+                <div class="input_field">
+                    <label for="veh_number">Vehicle Number : </label>
+                    <input type="text" class="form_input" id="veh_number" name="veh_number" placeholder="vehicle no"
+                        required>
+                </div>
+                <div class="input_field">
+                    <label for="type">Type : </label>
+
+                    <input type="radio" id="cycle" name="type" value="cycle">
+                    <label for="cycle" class="label_radio">Cycle</label>
+
+                    <input type="radio" id="bike" name="type" value="bike">
+                    <label for="bike" class="label_radio">Two-Wheeler</label>
+
+                    <input type="radio" id="car" name="type" value="car">
+                    <label for="car" class="label_radio">Four-Wheeler</label>
+                </div>
+                <div class="input_field">
+                    <label for="empid">Employee id : </label>
+                    <input type="text" class="form_input" id="empid" name="empid" value="employee id" required>
+                </div>
+                <div class="input_field">
+                    <label for="identification">Identification : </label>
+                    <textarea name="indentification" class="form_input" id="identification"
+                        placeholder="Any mark to identify"></textarea>
+                </div>
+                <div class="input_field">
+                    <input type="submit" placeholder="Submit" class="form_submit_button">
+                </div>
+            </form>
+        </details>
+    </section>
+
+
+    <!-- Add Feedback section with its form -->
+    <section id="feedback_section">
+        <h2>Give Feedback</h2>
+        <form id="feedback_form">
+            <h3>Get in touch</h3>
+            <div class="input_field_feedback">
+                <input type="text" name="emp_name" placeholder="Employee Name" required>
+            </div>
+            <div class="input_field_feedback">
+                <input type="text" name="emp_id" placeholder="Employee Id" required>
+            </div>
+            <div class="input_field_feedback">
+                <input type="text" name="email" placeholder="email" required>
+            </div>
+            <div class="input_field_feedback">
+                <input type="text" name="subject" placeholder="subject" required>
+            </div>
+            <div class="input_field_feedback">
+                <textarea name="message" placeholder="Message"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Send Email ->" class="feedback_submit_button">
+            </div>
+        </form>
+    </section>
+
+
+    <!-- Pricing sections with its cards to buy pass -->
+    <section id="pricing_section">
+        <h2>Pricing</h2>
+        <div class="pricing">
+
+            <div class="vehicle_price">
+                <h3>Cycle</h3>
+                <div class="circle">
+                    <p class="price">$5 /day</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+
+            <div class="vehicle_price">
+                <h3>Cycle</h3>
+                <div class="circle">
+                    <p class="price">$100 /month</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+
+            <div class="vehicle_price">
+                <h3>Cycle</h3>
+                <div class="circle">
+                    <p class="price">$500 /year</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+
+            <div class="vehicle_price">
+                <h3>MotorCycle</h3>
+                <div class="circle">
+                    <p class="price">$10 /day</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+
+            <div class="vehicle_price">
+                <h3>MotorCycle</h3>
+                <div class="circle">
+                    <p class="price">$200 /month</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+
+            <div class="vehicle_price">
+                <h3>MotorCycle</h3>
+                <div class="circle">
+                    <p class="price">$1000 /year</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+
+            <div class="vehicle_price">
+                <h3>Four Wheeler</h3>
+                <div class="circle">
+                    <p class="price">$20 /day</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+
+            <div class="vehicle_price">
+                <h3>Four Wheeler</h3>
+                <div class="circle">
+                    <p class="price">$500 /month</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+
+            <div class="vehicle_price">
+                <h3>Four Wheeler</h3>
+                <div class="circle">
+                    <p class="price">$3500 /year</p>
+                </div>
+                <button type="button" class="purchase_button">Purchase Now</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
