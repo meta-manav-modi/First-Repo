@@ -1,0 +1,392 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-left: 2px solid green;
+}
+
+#navbar{
+    width: 100%;
+    margin: 0%;
+    background-color: rgb(98, 98, 245);
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo_title{
+    padding: 20px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+.short_links {
+   display: flex;
+   padding: 10px;
+   gap: 10px;
+   
+}
+.short_links a{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.short_links a:hover{
+    background-color: rgb(144, 127, 225);
+}
+.media_icons{
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    color: white;
+}
+
+.home_background {
+    background-image: url("images/homebg.png");
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0%;
+    height: 100%;
+}
+
+.home_background_content {
+    height: 300px;
+    width: 350px;
+    margin-left: 130px;
+    margin-top: 250px;
+}
+
+.home_background_content h3 {
+    font-size: 40px;
+    color: white;
+}
+
+.home_background_content button {
+    height: 40px;
+    width: 130px;
+    border: none;
+}
+.phone1 {
+    height: 500px;
+    padding: 150px;
+}
+
+
+
+
+.features_title {
+    margin: 0%;
+    margin-top: 80px;
+    text-align: center;
+    color: rgb(68, 120, 198);
+    font-weight: bold;
+}
+
+.features_desc {
+    text-align: center;
+    margin: 0%;
+    font-size: small;
+}
+
+#features {
+    margin: 80px 100px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 60px;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.feature img {
+    width: 80px;
+}
+
+.feature p {
+    font-size: smaller;
+}
+
+
+
+#weather_details {
+    margin: 0;
+    padding: 60px;
+    padding-top: 150px;
+    margin-bottom: 100px;
+}
+
+.weather_detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    gap: 25px;
+}
+.card{
+    width: 200px;
+    height: 100%;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.card:nth-child(1) {
+    transform: rotateY(20deg);
+    opacity: 0.8;
+    scale: 0.9;
+}
+.card:nth-child(2) {
+    transform: rotateY(15deg);
+    opacity: 0.9;
+    scale: 1;
+}
+.card:nth-child(3) {
+    transform: rotateY(0deg);
+    scale: 1.2;
+}
+.card:nth-child(4) {
+    transform: rotateY(-15deg);
+    opacity: 0.9;
+    scale: 1;
+}
+.card:nth-child(5) {
+    transform: rotateY(-20deg);
+    opacity: 0.8;
+    scale: 0.9;
+}
+
+
+
+
+
+.screenshot_title {
+    background-color: rgb(250, 234, 214);
+    text-align: center;
+    color: rgb(68, 120, 198);
+    font-weight: bold;
+    margin: 0%;
+    padding-top: 10px;
+}
+
+.screenshot_description {
+    background-color: rgb(250, 234, 214);
+    text-align: center;
+    margin: 0%;
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+#screenshots {
+    background-color: rgb(244, 239, 233);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px;
+
+}
+
+.cloudy_weather {
+    padding: 80px;
+    padding-top: 160px;
+    margin-left: 80px;
+    height: 400px;
+    width: 250px;
+}
+
+.cloudy_weather h3 {
+    font-size: 27px;
+}
+
+.cloudy_weather_pic {
+    position: relative;
+    padding: 20px;
+    margin-left: 100px;
+    position: relative;
+    z-index: 0;
+}
+.sunny_background::before{
+    content: "Sunny";
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    color: rgb(173, 137, 93);
+    font-weight: 30;
+    z-index: -1;
+    pointer-events: none;
+}
+.cloudy_background::before{
+    content: "Cloudy";
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    color: rgb(173, 137, 93);
+    font-weight: 30;
+    z-index: -1;
+    pointer-events: none;
+}
+.rainy_background::before{
+    content: "Rainy";
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    font-weight: 30;
+    color: rgb(173, 137, 93);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reviews_title {
+    margin: 0%;
+    margin-top: 80px;
+    text-align: center;
+    color: rgb(68, 120, 198);
+    font-weight: bold;
+}
+
+.reviews_desc {
+    text-align: center;
+    margin: 0%;
+    font-size: small;
+}
+#reviews{
+    padding: 40px 180px;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.riview{
+    width: 400px;
+}
+.riview p{
+    margin: 0%;
+    font-size: medium;
+}
+.riview h5{
+    margin: 0%;
+    margin-top: 5px;
+}
+.riview::before{
+    content: '"';
+    font-size: 50px;
+    color: rgb(68, 120, 198);
+}
+.riview::after{
+    content: '"';
+    font-size: 50px;
+    color: rgb(68, 120, 198);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#download_app {
+    background-color: rgb(144, 127, 225);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.appdownload_pic {
+    width: 450px;
+    height: 500px;
+    margin-right: 150px;
+}
+
+.download_app_content {
+    padding: 60px;
+}
+
+.download_app_content h3 {
+    font-size: 40px;
+    color: white;
+}
+
+.download_app_content p {
+    font-size: 20px;
+    color: white;
+}
+
+.store_images {
+    padding: 10px;
+}
+
+
+#homepage_footer{
+    margin: 0%;
+    background-color: rgb(48, 42, 82);
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+}
+.footer_logo{
+    padding: 30px;
+}
+.footer_links {
+   display: flex;
+   padding: 20px;
+   gap: 10px;
+   
+}
+.footer_links a{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.footer_links a:hover{
+    background-color: rgb(144, 127, 225);
+}
+.footer_media_icons{
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    color: white;
+}
+.line{
+    margin: 20px 80px;
+}
+#homepage_footer h4{
+    color: white;
+    text-align: center;
+    font-size: medium;
+    margin: 0%;
+    font-weight: 100;
+}
