@@ -17,6 +17,7 @@
         <h3 class="text-center mb-4">ANNEX</h3>
 
         <ul class="nav flex-column">
+            <h3 class="side_bar_heading text-muted">Main </h3>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="bi bi-speedometer2"></i> Dashboard</a>
             </li>
@@ -38,7 +39,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="bi bi-calendar"></i> Calendar</a>
             </li>
-
+            <h3 class="side_bar_heading text-muted">Components </h3>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#UIelements" role="button" aria-expanded="false">
                     <i class="bi bi-layers"></i> UI Elements
@@ -99,6 +100,7 @@
                 </div>
             </li>
 
+            <h3 class="side_bar_heading text-muted">Extra </h3>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="bi bi-table"></i> Tables</a>
             </li>
@@ -192,171 +194,263 @@
                     <small>Posts</small>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card p-3 text-center">
-                    <h6>5 TB Bandwidth usage</h6>
-                    <h6>5412 Download count</h6>
-                    <canvas id="usageChart" height="100"></canvas>
+            <div class="col-md-12 col-lg-12 col-xl-4">
+                <div class="card bg-white m-b-30"><img src="images/wather.jpg" alt="" class="img-fluid">
+                    <div class="card-body bg-primary">
+                        <div class="row">
+                            <div class="col-6 align-self-center">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 text-center"><canvas id="partly-cloudy-day" width="70"
+                                            height="0"></canvas>
+                                        <h6><i class="bi bi-cloud-sun fs-1 text-white"></i></h6>
+                                        <h6 class="text-white">SUN DAY <span>25<sup>th</sup></span></h6>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 text-center align-self-center">
+                                        <h5 class="mt-0 text-white"><b>32°</b></h5>
+                                        <p class="text-white weather_text">Partly cloudy</p>
+                                        <p class="text-white weather_text">15km/h - 37%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 align-self-center">
+                                <div class="row mb-0    ">
+                                    <div class="col-6 text-center ">
+                                        <h6 class="text-white mt-0 font-14 mb-2">MON</h6><canvas id="rain" width="28"
+                                            height="0"></canvas>
+                                        <h6><i class="bi bi-cloud fs-3 text-white"></i></h6>
+                                        <h6 class="text-white font-14">38°</h6>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h6 class="text-white mt-0 font-12">TUE</h6><canvas id="wind" width="35"
+                                            height="0"></canvas>
+                                        <h6><i class="bi bi-wind fs-3 text-white"></i></h6>
+                                        <h6 class="text-white font-14">32°<i class="wi-degrees"></i></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Members Table and Weather -->
+            <div class="row my-4">
+                <div class="col-md-8">
+                    <div class="card p-3">
+                        <h6>Members Profiles</h6>
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Member</th>
+                                    <th>Name</th>
+                                    <th>Country</th>
+                                    <th>Earnings</th>
+                                    <th>Sales</th>
+                                    <th>Reviews</th>
+                                    <th>Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="images/elon.jpg" class="profile-img1"></td>
+                                    <td>Elon Musk</td>
+                                    <td><img src="https://flagcdn.com/us.svg" width="20"></td>
+                                    <td>$1000</td>
+                                    <td>10</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar" style="width: 70%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/bill.webp" class="profile-img1"></td>
+                                    <td>Bill Gates</td>
+                                    <td><img src="https://flagcdn.com/us.svg" width="20%"></td>
+                                    <td>$490</td>
+                                    <td>24</td>
+                                    <td>⭐⭐⭐</td>
+                                    <td>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar" style="width: 50%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/jeff.webp" class="profile-img1"></td>
+                                    <td>Jeff Bezos</td>
+                                    <td><img src="https://flagcdn.com/us.svg" width="20"></td>
+                                    <td>$490</td>
+                                    <td>24</td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-success" style="width: 50%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/sundar.webp" class="profile-img1"></td>
+                                    <td>Sundar Pichai</td>
+                                    <td><img src="https://flagcdn.com/us.svg" width="20"></td>
+                                    <td>$490</td>
+                                    <td>24</td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-danger" style="width: 50%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h5 class="mt-2 mb-4">New Users</h5>
+                        <ul class="list-unstyled activity_user pe-3">
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/bill.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Bill Gates</p>
+                                        <small class="text-muted">New York</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-success">Now</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/jeff.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Jeff Bazos</p>
+                                        <small class="text-muted">California</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-success">Now</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/sundar.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Sundar Pichai</p>
+                                        <small class="text-muted">India</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-danger">10 min ago</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/bill.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Bill Gates</p>
+                                        <small class="text-muted">New York</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-success">Now</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/jeff.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Jeff Bazos</p>
+                                        <small class="text-muted">California</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-success">Now</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/sundar.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Sundar Pichai</p>
+                                        <small class="text-muted">India</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-danger">10 min ago</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/bill.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Bill Gates</p>
+                                        <small class="text-muted">New York</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-success">Now</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/jeff.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Jeff Bazos</p>
+                                        <small class="text-muted">California</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-success">Now</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <img src="images/sundar.webp" alt="" class="profile-img">
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0">Sundar Pichai</p>
+                                        <small class="text-muted">India</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <small class="text-danger">10 min ago</small>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Members Table and Weather -->
-        <div class="row my-4">
-            <div class="col-md-8">
-                <div class="card p-3">
-                    <h6>Members Profiles</h6>
-                    <table class="table align-middle">
-                        <thead>
-                            <tr>
-                                <th>Member</th>
-                                <th>Name</th>
-                                <th>Country</th>
-                                <th>Earnings</th>
-                                <th>Sales</th>
-                                <th>Reviews</th>
-                                <th>Progress</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><img src="images/elon.jpg" class="profile-img1"></td>
-                                <td>Elon Musk</td>
-                                <td><img src="https://flagcdn.com/us.svg" width="20"></td>
-                                <td>$1000</td>
-                                <td>10</td>
-                                <td>⭐⭐⭐⭐⭐</td>
-                                <td>
-                                    <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar" style="width: 70%;"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/bill.webp" class="profile-img1"></td>
-                                <td>Bill Gates</td>
-                                <td><img src="https://flagcdn.com/us.svg" width="20%"></td>
-                                <td>$490</td>
-                                <td>24</td>
-                                <td>⭐⭐⭐</td>
-                                <td>
-                                    <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar" style="width: 50%;"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/jeff.webp" class="profile-img1"></td>
-                                <td>Jeff Bezos</td>
-                                <td><img src="https://flagcdn.com/us.svg" width="20"></td>
-                                <td>$490</td>
-                                <td>24</td>
-                                <td>⭐⭐⭐⭐</td>
-                                <td>
-                                    <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-success" style="width: 50%;"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/sundar.webp" class="profile-img1"></td>
-                                <td>Sundar Pichai</td>
-                                <td><img src="https://flagcdn.com/us.svg" width="20"></td>
-                                <td>$490</td>
-                                <td>24</td>
-                                <td>⭐⭐⭐⭐</td>
-                                <td>
-                                    <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-danger" style="width: 50%;"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h5 class="mt-2 mb-4">New Users</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <div class="row align-items-center">
-                                <div class="col-auto">
-                                    <img src="images/bill.webp" alt="" class="profile-img">
-                                </div>
-                                <div class="col">
-                                    <p class="mb-0">Bill Gates</p>
-                                    <small class="text-muted">New York</small>
-                                </div>
-                                <div class="col-auto">
-                                    <small class="text-success">Now</small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-3">
-                            <div class="row align-items-center">
-                                <div class="col-auto">
-                                    <img src="images/jeff.webp" alt="" class="profile-img">
-                                </div>
-                                <div class="col">
-                                    <p class="mb-0">Jeff Bazos</p>
-                                    <small class="text-muted">California</small>
-                                </div>
-                                <div class="col-auto">
-                                    <small class="text-success">Now</small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-3">
-                            <div class="row align-items-center">
-                                <div class="col-auto">
-                                    <img src="images/sundar.webp" alt="" class="profile-img">
-                                </div>
-                                <div class="col">
-                                    <p class="mb-0">Sundar Pichai</p>
-                                    <small class="text-muted">India</small>
-                                </div>
-                                <div class="col-auto">
-                                    <small class="text-danger">10 min ago</small>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
     </div>
-    <footer class="footer_style mt-2">
-        <h4>© 2019 Annex by Mannatthemes.</h4>
-    </footer>
+        <footer class="footer_style mt-2">
+            <h4>© 2019 Annex by Mannatthemes.</h4>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-        const ctx3 = document.getElementById('usageChart').getContext('2d');
-        const usageChart = new Chart(ctx3, {
-            type: 'line',
-            data: {
-                labels: ['June', 'July', 'Aug', 'Sep', 'Oct', 'Nov'],
-                datasets: [{
-                    label: 'Usage',
-                    data: [30, 40, 35, 50, 45, 60],
-                    borderColor: '#4fc3f7',
-                    backgroundColor: 'rgba(79, 195, 247, 0.2)',
-                    fill: true
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: { legend: { display: false } }
-            }
-        });
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"></script>
 
 </body>
 
